@@ -17,7 +17,8 @@ class MemberServiceTest {
     @BeforeEach
     public void beforeEach() {
         memberRepository = new MemoryMemberRepository();  // 객체 생성
-        memberService = new MemberService(memberRepository); // MemberService를 불러올 때 인자로 memberRepository를 넘겨줌 => 같은 리포지토리를 사용하게 됨
+        memberService = new MemberService(memberRepository);
+        // MemberService를 불러올 때 인자로 memberRepository를 넘겨줌 => 같은 리포지토리를 사용하게 됨
     }
 
     @AfterEach
