@@ -10,7 +10,9 @@ import java.util.List;
 import java.util.Optional;
 
 public class JdbcMemberRepository implements MemberRepository {
+    //
     private final DataSource dataSource;
+    // 스프링을 통해 주입받은 dataSource를 통해 db와 connection함
     public JdbcMemberRepository(DataSource dataSource) {
         this.dataSource = dataSource;
     }
