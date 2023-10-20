@@ -1,7 +1,6 @@
 package hello.hellospring.service;
 
-import hello.hellospring.repository.JpaMemberRepository;
-import hello.hellospring.repository.MemberRepository;
+import hello.hellospring.repository.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -33,12 +32,12 @@ public class SpringConfig {
         return new MemberService(memberRepository);   // 의존 관계 설정
     }
     // 나중에 DB가 정해지면 바뀔 부분
-    @Bean
+/*    @Bean
     public MemberRepository memberRepository() {
-//        return new MemoryMemberRepository();
-//        return new JdbcMemberRepository(dataSource);    // JdbcMemberRepository가 dataSource 사용
-//        return new JdbcTemplateMemberRepository(dataSource); // JdbcTempalteRepository가 dataSource 사용
+        return new MemoryMemberRepository();
+        return new JdbcMemberRepository(dataSource);    // JdbcMemberRepository가 dataSource 사용
+        return new JdbcTemplateMemberRepository(dataSource); // JdbcTempalteRepository가 dataSource 사용
         return new JpaMemberRepository(em); // JpaMemberRepository가 엔티티매니져 사용
-    }
+    }*/
 
 }
