@@ -10,6 +10,7 @@ public class SpringConfig {
     private final MemberRepository memberRepository;
     @Autowired
     public SpringConfig(MemberRepository memberRepository) {
+
         this.memberRepository = memberRepository;
     }
 
@@ -29,6 +30,7 @@ public class SpringConfig {
     // 스프링 빈에 등록
     @Bean
     public MemberService memberService() {
+
         return new MemberService(memberRepository);   // 의존 관계 설정
     }
     // 나중에 DB가 정해지면 바뀔 부분
